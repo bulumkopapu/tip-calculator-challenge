@@ -1,0 +1,68 @@
+//FONT INSTALL
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+//COLOR VARIABLES
+$darkGreen: #00474B;
+$lightGreen: #C5E4E7;
+$white: #ffffff;
+$green: #26C2AE;;
+
+//FONT WEIGHTS
+// $font-weights:(
+// 	"regular": 400,
+// 	"bold": 700
+// ); 
+
+// @function weight($weight){
+// 	@return map-get($font-weights, $weight);
+// }
+
+//FONT FAMILY
+@mixin fontFamily ($fontWeight, $fontSize, $lineHeight, $color){
+    font-family: 'Space Mono', serif;
+    font-style: normal;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    color: $color;
+}
+
+p {
+    @include fontFamily(700, 16px, 24px, #5E7A7D);
+}
+
+button{
+    @include fontFamily(700, 16px, 24px, $white);
+    background: $darkGreen;
+    border-radius: 5px;
+    height: 48px;
+    border: none;
+    width: 100%;
+}
+
+
+//CSS RESET
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a {
+    text-decoration: none; /* no underline */
+}
+
+//CONTAINER SETTINGS
+.container {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+//MEDIA QUERIES
+@mixin desktop-screen {
+    @media (min-width: 920px) { @content }
+}
