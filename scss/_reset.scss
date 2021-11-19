@@ -1,6 +1,23 @@
 //FONT INSTALL
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
+//MEDIA QUERIES
+@mixin desktop-screen {
+    @media (min-width: 920px) { @content }
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-row-space-between{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 //COLOR VARIABLES
 $darkGreen: #00474B;
 $lightGreen: #C5E4E7;
@@ -31,6 +48,21 @@ p {
     @include fontFamily(700, 16px, 24px, #5E7A7D);
 }
 
+.white-paragraph {
+     @include fontFamily(700, 16px, 24px, $white);
+}
+
+.small-paragraph {
+    @include fontFamily(700, 13px, 20px,#7F9D9F);
+}
+
+.number-paragraph {
+    @include fontFamily(700, 32px, 47px, $green);
+    letter-spacing: -0.666667px;
+    text-align: right;
+    padding-left: 3px;
+}
+
 button{
     @include fontFamily(700, 16px, 24px, $white);
     background: $darkGreen;
@@ -38,6 +70,38 @@ button{
     height: 48px;
     border: none;
     width: 100%;
+    cursor: pointer;
+    &:hover{
+        background: #9FE8DF;
+        color: $darkGreen;
+    }
+    &:focus{
+        background: $green;
+        color: $darkGreen;
+    }
+    @include desktop-screen{
+        @include fontFamily(700, 24px, 36px, $white);
+    }
+}
+
+#reset-button{
+    background: $green;
+    border-radius: 5px;
+    height: 48px;
+    border: none;
+    width: 100%;
+    margin-bottom: 24px;
+    cursor: pointer;
+    &:hover{
+        background: #9FE8DF;
+    }
+
+    @include fontFamily(700, 20px, 30px, #00474B);
+    text-align: center;
+    
+    @include desktop-screen{
+        margin-bottom: 40px;
+    }
 }
 
 
@@ -62,7 +126,3 @@ a {
     margin: 0 auto;
 }
 
-//MEDIA QUERIES
-@mixin desktop-screen {
-    @media (min-width: 920px) { @content }
-}

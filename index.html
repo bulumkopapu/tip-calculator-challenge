@@ -14,29 +14,56 @@
             <img src="./images/logo.png" alt="">
         </div>
         <div class="main-card">
-            <div class="bill-section">
-                <p>Bill</p>
-                <input type="text" id="bill" name="bill" value="0">
-                <div class="rand-icon">
-                    <p>R</p>
+            <div class="part-A">
+                <div class="bill-section">
+                    <p>Bill</p>
+                    <input type="number" id="bill" name="bill" value="0">
+                    <div class="rand-icon">
+                        <p>R</p>
+                    </div>
+                    
                 </div>
-                
-            </div>
-            <div class="selectTip-section">
-                <p>Select tip %</p>
-                <div class="button-grid">
-                    <button>5%</button>
-                    <button>10%</button>
-                    <button>15%</button>
-                    <button>25%</button>
-                    <button>50%</button>
-                    <input type="text" id="custom_tip" name="custom_tip" value="custom">
+                <div class="selectTip-section">
+                    <p>Select tip %</p>
+                    <div class="button-grid">
+                        <button>5%</button>
+                        <button>10%</button>
+                        <button>15%</button>
+                        <button>25%</button>
+                        <button>50%</button>
+                        <input type="text" id="custom_tip" name="custom_tip" value="custom">
+                    </div>
+                </div>
+                <div class="numberOfPeople-section">
+                    <p>Number of people</p>
+                    <input type="number" id="number_Of_people" name="number_Of_people" value="5" min="1">
+                    <img src="/images/personIcon.png" alt="">
                 </div>
             </div>
-            <div class="numberOfPeople-section">
-                <p>Number of people</p>
-                <input type="text" id="number_Of_people" name="number_Of_people" value="5">
-                <img src="/images/personIcon.png" alt="">
+            <div class="part-B">
+                <div class="tipDisplay-section">
+                    <div class="tip-amount flex-row-space-between">
+                        <div class="tip-text">
+                            <p class="white-paragraph">Tip Amount</p>
+                            <p class="small-paragraph">/ person</p>
+                        </div>
+                        <div class="number-display flex-row">
+                            <p class="number-paragraph">R</p>
+                            <p id="tip-amount-number" class="number-paragraph">0.00</p>
+                        </div>
+                    </div>
+                    <div class="total flex-row-space-between">
+                        <div class="tip-text">
+                            <p class="white-paragraph">Total</p>
+                            <p class="small-paragraph">/ person</p>
+                        </div>
+                        <div class="number-display flex-row">
+                            <p class="number-paragraph">R</p>
+                            <p id="tip-amount-number" class="number-paragraph">0.00</p>
+                        </div>
+                    </div>
+                    <button id="reset-button">RESET</button>
+                </div>
             </div>
         </div>
     </main>
