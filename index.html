@@ -17,7 +17,7 @@
             <div class="part-A">
                 <div class="bill-section">
                     <p>Bill</p>
-                    <input type="number" id="bill" name="bill" value="0">
+                    <input type="number" id="bill" name="bill" value="100020">
                     <div class="rand-icon">
                         <p>R</p>
                     </div>
@@ -26,11 +26,11 @@
                 <div class="selectTip-section">
                     <p>Select tip %</p>
                     <div class="button-grid">
-                        <button>5%</button>
-                        <button>10%</button>
-                        <button>15%</button>
-                        <button>25%</button>
-                        <button>50%</button>
+                        <button id="five">5%</button>
+                        <button id="ten">10%</button>
+                        <button id="fifteen">15%</button>
+                        <button id="twentyFive">25%</button>
+                        <button id="fifty">50%</button>
                         <input type="text" id="custom_tip" name="custom_tip" value="custom">
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                         </div>
                         <div class="number-display flex-row">
                             <p class="number-paragraph">R</p>
-                            <p id="tip-amount-number" class="number-paragraph">0.00</p>
+                            <p id="total-number" class="number-paragraph">0.00</p>
                         </div>
                     </div>
                     <button id="reset-button">RESET</button>
