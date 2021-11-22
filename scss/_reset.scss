@@ -16,6 +16,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    
 }
 
 //COLOR VARIABLES
@@ -23,16 +25,6 @@ $darkGreen: #00474B;
 $lightGreen: #C5E4E7;
 $white: #ffffff;
 $green: #26C2AE;;
-
-//FONT WEIGHTS
-// $font-weights:(
-// 	"regular": 400,
-// 	"bold": 700
-// ); 
-
-// @function weight($weight){
-// 	@return map-get($font-weights, $weight);
-// }
 
 //FONT FAMILY
 @mixin fontFamily ($fontWeight, $fontSize, $lineHeight, $color){
@@ -63,7 +55,8 @@ p {
     padding-left: 3px;
 }
 
-button{
+
+input[type=button]{
     @include fontFamily(700, 16px, 24px, $white);
     background: $darkGreen;
     border-radius: 5px;
@@ -94,6 +87,12 @@ button{
     cursor: pointer;
     &:hover{
         background: #9FE8DF;
+    }
+
+    &:disabled {
+        background: #0D686D;
+        color: #00474B;
+
     }
 
     @include fontFamily(700, 20px, 30px, #00474B);

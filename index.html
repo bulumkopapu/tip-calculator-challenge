@@ -17,25 +17,27 @@
             <div class="part-A">
                 <div class="bill-section">
                     <p>Bill</p>
-                    <input type="number" id="bill" name="bill" value="100020">
+                    <input type="number" id="bill" name="bill" value="0">
                     <div class="rand-icon">
                         <p>R</p>
-                    </div>
-                    
+                    </div>  
                 </div>
                 <div class="selectTip-section">
-                    <p>Select tip %</p>
+                        <p>Select tip %</p>
                     <div class="button-grid">
-                        <button id="five">5%</button>
-                        <button id="ten">10%</button>
-                        <button id="fifteen">15%</button>
-                        <button id="twentyFive">25%</button>
-                        <button id="fifty">50%</button>
+                        <input type="button" id="five" value="5%">
+                        <input type="button" id="ten" value="10%">
+                        <input type="button" id="fifteen" value="15%">
+                        <input type="button" id="twentyFive" value="25%">
+                        <input type="button" id="fifty" value="50%">
                         <input type="text" id="custom_tip" name="custom_tip" value="custom">
                     </div>
                 </div>
                 <div class="numberOfPeople-section">
-                    <p>Number of people</p>
+                    <div class="flex-row-space-between">
+                        <p>Number of people</p>
+                        <p id="js_paragraph">Cant be 0 or less</p>
+                    </div>
                     <input type="number" id="number_Of_people" name="number_Of_people" value="5" min="1">
                     <img src="/images/personIcon.png" alt="">
                 </div>
@@ -62,7 +64,7 @@
                             <p id="total-number" class="number-paragraph">0.00</p>
                         </div>
                     </div>
-                    <button id="reset-button">RESET</button>
+                    <button id="reset-button" disabled>RESET</button>
                 </div>
             </div>
         </div>

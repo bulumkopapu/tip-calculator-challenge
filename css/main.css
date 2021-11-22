@@ -50,7 +50,7 @@ p {
   padding-left: 3px;
 }
 
-button {
+input[type=button] {
   font-family: 'Space Mono', serif;
   font-style: normal;
   font-weight: 700;
@@ -65,18 +65,18 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+input[type=button]:hover {
   background: #9FE8DF;
   color: #00474B;
 }
 
-button:focus {
+input[type=button]:focus {
   background: #26C2AE;
   color: #00474B;
 }
 
 @media (min-width: 920px) {
-  button {
+  input[type=button] {
     font-family: 'Space Mono', serif;
     font-style: normal;
     font-weight: 700;
@@ -105,6 +105,11 @@ button:focus {
 
 #reset-button:hover {
   background: #9FE8DF;
+}
+
+#reset-button:disabled {
+  background: #0D686D;
+  color: #00474B;
 }
 
 @media (min-width: 920px) {
@@ -216,6 +221,10 @@ main .main-card input[type=number] {
   border: none;
 }
 
+main .main-card .error {
+  border: 2px solid red;
+}
+
 main .main-card .bill-section {
   position: relative;
   margin-bottom: 32px;
@@ -283,6 +292,11 @@ main .main-card .numberOfPeople-section {
 
 main .main-card .numberOfPeople-section p {
   margin-bottom: 16px;
+}
+
+main .main-card .numberOfPeople-section #js_paragraph {
+  visibility: hidden;
+  color: red;
 }
 
 main .main-card .numberOfPeople-section img {

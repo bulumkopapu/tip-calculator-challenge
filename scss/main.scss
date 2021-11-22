@@ -68,6 +68,9 @@ main {
             border: none;
             
         }
+        .error{
+            border:2px solid red;
+        }
 
         .bill-section {
             position: relative;
@@ -119,6 +122,11 @@ main {
             p {
                 margin-bottom: 16px;
             }
+            #js_paragraph {
+                visibility: hidden;
+                color: red;
+            }
+
             img {
                 position: relative;
                 top: -33px;
